@@ -1,0 +1,228 @@
+.video{
+
+  /*   position: fixed;
+    right: 0;
+    bottom: 0;
+   
+    
+     */
+      padding: 70px;
+  margin-top: 8rem;
+  width: 50px;
+    height: 100%; 
+   /*   min-width: 100%;
+    min-height: 100%; */
+    z-index: -9999;
+
+}
+
+
+
+/*author:starttemplate*/
+/*reference site : starttemplate.com*/
+body {
+  /*bckground-image:url('https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1957&q=80');*/
+  background-image:url("images/sacMain.JPG");
+  background-position:center;
+  background-size:cover; 
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+  font-family: 'Dancing Script', cursive!important;
+}
+
+.container {
+    padding: 110px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff!important;
+    opacity: 1; /* Firefox */
+    font-size:18px!important;
+}
+.form-login {
+    background-color: rgba(0,0,0,0.55);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    color:white;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+.form-control{
+    background:transparent!important;
+    color:white!important;
+    font-size: 18px!important;
+}
+h1{
+    color:white!important;
+}
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+.text-white{
+    color: white!important;
+}
+.wrapper {
+    text-align: center;
+}
+.footer p{
+    font-size: 18px;
+}
+
+
+/*
+.contenair{
+position:fixed;
+
+}
+*/
+/* body {
+	background-color:rgb(128, 64, 64);
+	font:1em Helvetica;
+	}
+	
+.card{
+    width: 420px;
+	margin:25px auto;
+	margin-top:50px;
+}
+
+.card-body{
+    width: 420px;
+	margin:25px auto;
+	margin-top:50px;
+}
+.card-header{
+    width: 420px;
+	margin:25px auto;
+	margin-top:50px;
+	}
+.contenair {
+	width: 600px;
+	margin:25px auto;
+	margin-top:50px;
+}
+
+.whysign{
+	float:left;
+	background-color:red;
+	width:450px;
+	height:528px;
+	border-radius:0 5px 5px 0;
+	padding-top:20px;
+	padding-right:20px;
+	
+}
+.whysingLogin{
+		float:left;
+	background-color: rgba(0,0,0,.2);
+	width:480px;
+	height:347px;
+	border-radius:0 5px 5px 0;
+	padding-top:20px;
+	padding-right:20px;
+}
+.whyforgotPassword{
+
+		float:left;
+	background-color:white;
+	width:480px;
+	height:347px;
+	border-radius:0 5px 5px 0;
+	padding-top:20px;
+	padding-right:20px;
+}
+
+.signup{
+
+		float:left;
+	background-color:rgb(255, 128, 128);
+	width:480px;
+	height:347px;
+	border-radius:0 5px 5px 0;
+	padding:30px 20px;
+	padding-right:20px;
+	
+}
+[type=text],[type=email],[type=number],[type=password],select,option{
+	
+
+   display:block;
+   margin:0 auto;
+   width:80%;
+   border:0;                             solid(bordur ps visible)
+   border-bottom:1px solid rgba(0,0,0,.2); rgba(rouge,vert,bleu,alfa)
+   height:45px;
+   line-height:45px;
+   margin-bottom:10px;
+   font-size:1em;
+   color:black; 
+}
+[type=submit]{
+	margin-top:25px;
+	width:80px;
+	border:0;
+	border-radius:0 ;
+	background-color:#0080FF;
+	border-radius:5px;
+	 height:50px;
+	 font-size:1em;
+	 font-weight:400;
+	 color:white;
+	 
+}
+
+[type='text']:focus{
+	outline:none;
+	border-color:#53CACE;
+	
+}
+h1{
+	 color:red;
+	 font-size:2.5em;
+	 font-weight:900;
+	
+}
+p{
+	 color:black;
+	 font-size:1.2em;
+	 font-weight:50px 0 50px 0;
+	
+}
+span {
+  font-size: .75em;
+  background-color: white;
+  padding: 2px 5px;
+  color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  margin: 5px;
+}
+
+span:hover {
+  color: #53CACE;
+}
+
+p:nth-of-type(2) {
+  font-size: 1em;
+} */
+
+
+
+
+
+
+
+
+
+
+	
