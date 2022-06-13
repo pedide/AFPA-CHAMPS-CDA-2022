@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.block{
+	width : 840px;
+	margin : 40px auto ;
+	margin-top: 50px;
+}
+.form-group{
+	display:grid; 
+	margin-left:10px;
+	margin-bottom:10px
+}
+.lab{
+	margin-bottom:10px
+}
+.form-control{
+	width:20%;
+}
+
+[type=submit]{
+	width:20%;
+	border:0;
+	height:40px;
+	font-size:1em;
+	font-weight:400;
+	background-color: orange;
+	color: white;
+	border-color : #007bff;
+	border-radius : 5px;
+	
+}
+.button{
+	text-align:center;
+}
