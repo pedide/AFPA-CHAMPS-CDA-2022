@@ -1,0 +1,93 @@
+body::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+	/*   background:  #501e27;
+ */
+	background: black;
+}
+
+body::-webkit-scrollbar {
+	width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.icon-bar {
+	background-color: #000;
+}
+
+@media ( max-width : 720px) {
+	body {
+		background-size: 100% 100%;
+	}
+	.navbar-collapse {
+		background: #EAECC6;
+	}
+	.para {
+		min-height: 800px;
+	}
+}
+
+.nav {
+	font-family: Lithos Pro;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.navbar {
+	position: fixed;
+	transition: 1s;
+	background: rgba(0, 0, 0, 0.50);
+	height: 80px
+}
+
+.navbar-brand {
+	color: #fff;
+	font-size: 45px;
+	font-family: Germania;
+	cursor: pointer;
+}
+
+.navbar-brand:hover {
+	background: linear-gradient(to left, #EAECC6, #bfa65f, #EAECC6);
+	font-size: 45px;
+	font-family: Germania;
+	cursor: pointer;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	display: inline-block
+}
+
+.nav li {
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.nav li:after {
+	content: '';
+	display: block;
+	border-bottom: 2px solid #bfa65f;
+	transform: scaleX(0);
+	transition: .2s ease-in-out;
+}
+
+.nav li:hover:after {
+	transform: scaleX(1);
+}
+
+.para {
+	min-height: 500px;
+}
+
+.para h3 {
+	text-align: center;
+	margin-top: 15%;
+	color: #fff;
+	font-family: nyala;
+	font-size: 44px;
+}

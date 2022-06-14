@@ -1,0 +1,62 @@
+body {
+	margin-top: 8em;
+}
+
+.button {
+		background-image: linear-gradient(to top,  #bfa65f 0%, #EAECC6 51%, #bfa65f 100%);
+		color: white;
+			border: 1px solid #bfa65f;
+	
+	font-family: Germania;
+	font-weight: bold;
+	width: auto;
+	display: inline-block;
+	
+}
+
+.button:hover {
+	transition: 0.2s;
+
+			background-image: linear-gradient(to right, #ffffff 0%, #ffffff 51%, #ffffff 100%);
+		color: #bfa65f;
+		border: 1px solid #bfa65f;
+	/* border: 1px solid #000000  */
+	
+}
+
+.button-book {
+	background-image: linear-gradient(to top, #FFFFFF 0%, #FFFFFF 20%, #FFFFFF 100%);
+	font-family: Germania;
+	color: black;
+	font-weight: bold;
+	width: auto;
+	display: inline-block;
+	font-size: 1.3em;
+		border: 1px solid black
+	
+}
+
+.button-book:hover {
+	color: white;
+	transition: 0.2s;
+	background-image: linear-gradient(to top, #000000 0%, #000000 95%, #000000 100%);
+	border: 1px solid black
+}
+
+.text-black {
+	font-family: Germania;
+	color: black;
+	font-size: 2em
+}
+
+.text-black-medium {
+	font-family: Germania;
+	color: black;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    /* this could be defined on any parent */
+}

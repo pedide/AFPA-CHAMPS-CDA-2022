@@ -1,0 +1,29 @@
+
+.button-message {
+	background-image: linear-gradient(to top, #FFFFFF 0%, #FFFFFF 20%, #FFFFFF 100%);
+	font-family: Germania;
+	color: black;
+	font-weight: bold;
+	width: auto;
+	display: inline-block;
+	font-size: 1.3em;
+		border: 1px solid black
+	
+}
+
+.button-message:hover {
+	color: white;
+	transition: 0.2s;
+	background-image: linear-gradient(to top, #000000 0%, #000000 95%, #000000 100%);
+	border: 1px solid black
+}
+.subtitle {
+	float: left;
+	font-family: Germania;
+
+}
+
+.font-germania {
+	font-family: Germania;
+	
+}
