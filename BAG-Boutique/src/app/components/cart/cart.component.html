@@ -1,0 +1,72 @@
+<ng-container *ngIf="products.length !=0">
+    
+    <h3 style="font-size: 30px; color:#FF9999" >TOTAL: {{grandTotal}}</h3>
+    
+ <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>REF</th>
+                        <th>DESIGNATION</th>
+                        <th>DESCRIPTIF</th>
+                        <th>IMAGE</th>
+                        <th>PRIX</th>
+                        <th>QUANTITE</th>
+                        <th>TOTAL</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr *ngFor="let item of products; let i=index;">
+                        <td>1</td>
+                        <td>{{item.reference}}</td>
+                        <td>{{item.designation}}</td>
+                        <td>{{item.descriptif}}</td>
+                        <td><img class="picture" style="width:62px; margin-top:5px;" src="http://localhost:8087/{{item.image}}"></td>
+                        <td>{{item.prixVente}}€</td>
+                        <td><button (click)="incrementQuantite(quantite)" class="btn btn-sm btn-incre" style="color:#FF9999 ; vertical-align: middle" href=""> 
+                            <i class="fas fa-plus-square"></i> </button> {{quantite}}
+                        <button (click)="descrementQuantite(quantite)" class="btn btn-sm btn-decre" style="color:#FF9999 ; vertical-align: middle" href=""> 
+                            
+                            <i class="fas fa-minus-square"></i>
+                        </button></td>
+                        <td>{{quantite*item.prixVente}}</td>
+                        <td></td>
+                        <td>
+                            <button (click)="removeItem(item)"class="btn btn-outline-light" style="background:#FF9999"><i class="fa fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="emptyCart()" class="btn btn-danger">Ampty Cart</button></td>
+                        <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
+                        <td><button routerLink="/checkout" (click)="saveData()" class="btn btn-success">checkout</button></td>
+                        <td><strong>Grand total : {{grandTotal}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</ng-container>
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">Panier</h5>
+        </div>
+        <div class="center">
+            <img src="http://localhost:8087/image/panierrose.jpg" alt="">
+            <h4>Votre Panier est vide!</h4>
+            <h4>Merci d'Ajouter un Article</h4>
+            <button routerLink="/products" class="btn btn-outline-light" style="background:#FF9999">Shop Now</button>
+        </div>
+    </div>
+    
+</ng-container>
+
+ 
+ 

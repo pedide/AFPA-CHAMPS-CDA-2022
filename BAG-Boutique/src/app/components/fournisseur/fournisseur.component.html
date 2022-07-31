@@ -1,0 +1,38 @@
+<p>fournisseur works!</p>
+<div class="container">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light"></nav>
+    <a class="navbar-brand" href="http:://localhost:8087/fournisseur"></a>
+    <h2>Liste des fournisseur</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>RS FOUR</th>
+            <th>NOM</th>
+            <th>ADRESS</th>
+            <th>CODE POSTALE</th>
+            <th>VILLE</th>
+            <th>PAYS</th>
+            <th>TEL</th>
+            <th>FAX</th>
+            <th>MAIL</th>
+            <th>COMMANDE</th>
+        </tr>
+        <tr *ngFor="let f of fournisseur">
+        <td>{{f.idFour}}</td>
+        <td>{{f.rsFour}}</td>
+        <td>{{f.nomFour}}</td>
+        <td>{{f.rueAdressFour}}</td>
+        <td>{{f.cpAdressFour}}</td>
+        <td>{{f.villeAdressFour}}</td>
+        <td>{{f.paysFour}}</td>
+        <td>{{f.telFour}}</td>
+        <td>{{f.faxFour}}</td>
+        <td>{{f.mailFour}}</td>
+        <td>{{f.commande}}</td>
+    </tr>
+    </table>
+    
+    </div>
+    </div>
+    
