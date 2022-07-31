@@ -1,0 +1,36 @@
+<div class="register-photo">
+    <div class="form-container">
+        <div class="image-holder"></div>
+        <form  #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+            <h2 class="text-center"><strong>Nous sommes heureux de vous revoir !</strong></h2>
+            <div class="form-group">
+                <input class="form-control" type="text" name="username" placeholder="Username" ngModel
+                #usernameInput="ngModel" required>
+            </div>
+            <span class="help-block" style="color:red;"
+            *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a username</span>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password" ngModel
+                #passwordInput= "ngModel" required>
+            </div>
+            <span class="help-block" style="color:red;"
+                *ngIf="passwordInput.invalid && passwordInput.touched">Please enter a password.</span>
+            <!-- <div class="form-group">
+                <div class="d-flex justify-content-between"></div> -->
+                <br>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block btn-info" type="submit" [disabled]="loginForm.invalid || showLoading"
+                    name="button">
+                        <i *ngIf="showLoading" class="fas fa-spinner"></i>
+                        <span *ngIf="showLoading">Loading ...</span>
+                        <span *ngIf="!showLoading">Login</span>
+                    </button>
+                </div>
+            <!-- </div> -->
+            <hr>
+            <div> <a href="#" class="text-info">Mot de passe oublié ?</a> </div>
+            <div> Je n'ai pas de compte, <a routerLink="/register" class="text-info">je m'inscris.</a> </div>
+        
+        </form>
+    </div>
+</div>

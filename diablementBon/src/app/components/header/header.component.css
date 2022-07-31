@@ -1,0 +1,51 @@
+.form-control{
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 1%;
+    color: black;
+}
+.navbar{
+    background-color: #b39188;
+}
+
+#top-header{
+    padding: 10px;
+    padding-bottom: 10px;
+    background-color:linen;
+}
+
+.header-links li{
+    display: inline;
+    margin-right: 15px;
+    font-size: 12;
+}
+
+/*le dernier enfant de li*/
+.header-links li:last-child{
+    margin-right: 0px;
+}
+.header-links li a {
+    color:black;
+  }
+  
+  .header-links li a:hover {
+    color: #FF9999;
+  }
+  
+  .header-links li i {
+    color: #FF9999;
+    margin-right: 5px;
+  }
+  #top-header .header-links.pull-right {
+    float: none;
+    margin-top: 5px;
+  }
+  #top-header .header-links.pull-left {
+    float: none;
+  }

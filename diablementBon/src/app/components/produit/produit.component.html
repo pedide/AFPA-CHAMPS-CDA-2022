@@ -1,0 +1,27 @@
+<div class="container">
+<div class="container">
+    <nav class="navbar navbar-light bg-light"></nav>
+    <a class="navbar-brand" href="http://localhost:8085"></a>
+    <h2>Liste des produits</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>REFERENCE</th>
+            <th>DESIGNATION</th>
+            <th>DESCRIPTIF</th>
+            <th>IMAGE</th>
+            <th>PRIX DE VENTE</th>
+        </tr>
+        <!-- on fait une boucle et produit est objet ds component -->
+        <tr *ngFor = "let p of produit">
+            <td>{{p.id}}</td>
+            <td>{{p.reference}}</td>
+            <td>{{p.designation}}</td>
+            <td>{{p.descriptif}}</td>
+            <td><img class="picture" src="http://localhost:8085/{{p.image}}"></td>
+            <td>{{p.prixVente}}</td>
+        </tr>
+    </table>
+</div>
+
+</div>

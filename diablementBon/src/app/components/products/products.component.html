@@ -1,0 +1,43 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a href="">
+                <img style="width: 62px; margin-top: 5px;" src="https://www.lifemadedelicious.ca/-/media/GMI/Core-Sites/LMD/legacy/Images/LMD/Recipes/Rainbow-Surprise-Inside-Cake-16x9.jpg" alt="Gâteau multicolore">
+            <h6>Tous les produits</h6>
+            </a>
+        </div>
+        <div class="item">
+                <a href="">
+                    <img style="width: 62px; margin-top: 5px;" src="https://www.lifemadedelicious.ca/-/media/GMI/Core-Sites/LMD/legacy/Images/LMD/Recipes/Rainbow-Surprise-Inside-Cake-16x9.jpg" alt="Gâteau multicolore">
+                <h6>Les gâteaux</h6>
+                </a>
+        </div>
+        <div class="item">
+                <a href="">
+                    <img style="width: 62px; margin-top: 5px;" src="https://www.lifemadedelicious.ca/-/media/GMI/Core-Sites/LMD/legacy/Images/LMD/Recipes/Rainbow-Surprise-Inside-Cake-16x9.jpg" alt="Gâteau multicolore">
+                <h6>Douceurs individuels</h6>
+                </a>
+        </div>
+        <!-- <div class="item">
+            <a href="">
+                <img style="width: 62px; margin-top: 5px;" src="https://www.lifemadedelicious.ca/-/media/GMI/Core-Sites/LMD/legacy/Images/LMD/Recipes/Rainbow-Surprise-Inside-Cake-16x9.jpg" alt="Gâteau multicolore">
+            <h6>Les fantaisies</h6>
+            </a>
+        </div> -->
+    </div>
+</div>
+<div class="container">
+    <div class="row">   
+     <ng-container *ngFor="let item of productList">
+        <div class="card col-md-3">
+            <img src="http://localhost:8085/{{item.image}}" alt="">
+            <!-- <h5>{{item.reference}}</h5> -->
+            <h5>{{item.designation}}</h5>
+            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.descriptif}}</p>
+            <p>Prix : {{item.prixVente}} €</p>
+            <!-- des qu'on click sur le boutton il va exectuer la méthode addtocart -->
+            <button class="btn btn-outline-light" style="background:#B39188" (click)=actionAddToCart(item)>Ajouter au panier</button>
+        </div>
+     </ng-container>
+    </div>
+</div>

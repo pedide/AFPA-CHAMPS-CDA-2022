@@ -1,0 +1,94 @@
+<div class="container d-flex justify-content-center my-5" >
+    <div class="row my-2 mx-2 main" style="background:#FFFAF0">
+        <!--left-column-->
+        	<div class="col-md-4 col-12 mycol">
+            <!--image-->
+            <img src="http://localhost:8085/image/macarons.jpg">
+        	</div>
+        <!--right-column-->
+        <div class="col-md-8 col-12 xcol">
+            <h2 class="title pt-5 pb-3">Bienvenue à Diablement Bon.</h2>
+            <h4 class="title pt-5 pb-3">Merci de créer votre compte pour accédez à nos services.</h4>
+            
+            <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm.value)">
+                <div class="row rone">
+                    <div class="form-group col-md-6 fone py-3">
+                        <input type="text" class="form-control" name="firstName"
+							placeholder="Entrer votre prénom" ngModel
+                            #firstnameInput="ngModel" required>
+                    </div>
+                    <span class="help-block" style="color:red;"
+                        *ngIf="firstnameInput.invalid && firstnameInput.touched">Please enter a firstname</span>
+                     
+                    <div>
+                        <input class="form-control" type="text" name="lastName" placeholder="Entrer votre nom" ngModel
+                        #lastnameInput="ngModel" required>
+                    </div>
+                    <span class="help-block" style="color:red;"
+                        *ngIf="lastnameInput.invalid && lastnameInput.touched">Please enter a lastname</span>
+
+
+
+                    <div> 
+                    <input class="form-control" type="text" name="Username" placeholder="Entrer votre nom d'utilisateur" ngModel
+                        #usernameInput="ngModel" required>
+                    </div> 
+                    <span class="help-block" style="color:red;"
+                        *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a username</span>
+                </div>
+
+
+                    <!-- <div class="form-group col-md-6 fthree py-3">
+                        <input type="text" class="form-control jk" name="mobileNumber"
+							placeholder="Entrer votre numéro de téléphone" ngModel
+                            #mobileInput="ngModel" required>
+
+                            <span class="help-block" style="color:red;"
+                            *ngIf="mobileInput.invalid && mobileInput.touched">Please enter a mobile number</span>
+                    </div> -->
+                    
+        
+                <div class="row rtwo">
+                    <div class="form-group col-md-6 ffour py-3">
+                        <input type="email" class="form-control lm" name="email"
+							placeholder="Entrer votre adresse email"  ngModel
+                            #emailInput="ngModel" required>
+                    </div>
+                    <span class="help-block" style="color:red;"
+                        *ngIf="emailInput.invalid && emailInput.touched">Please enter a email</span>
+                   
+                </div>
+                <!-- <div class="row rthree">
+                    <div class="form-group col-md-12 ffour py-3">
+						<select name="securityQuestion">
+							<option value="Quelle est la marque de votre première voiture ?">Quelle est la marque de votre première voiture ?</option>
+							<option value="Quelle est votre couleur favorite ?">Quelle est votre couleur favorite ?</option>
+							<option value="Dans quelle ville êtes-vous né ?">Dans quelle ville êtes-vous né ?</option>
+							<option value="Quel est le nom de votre 1er animal de compagnie?">Quel est le nom de votre 1er animal de compagnie?</option>
+						</select>
+						<input type="text" class="form-control" name="answer"
+								placeholder="Choisir votre question et répondez."  ngModel
+                                #questionInput="ngModel" required>
+					</div> -->
+                    
+                
+                <div class="row rfour">
+                    <br>
+                    <button class="btn btn-success btn-block btn-info" type="submit" [disabled]="registerForm.invalid || showLoading"
+                        name="button">
+                        <i *ngIf="showLoading" class="fas fa-spinner"></i>
+                        <span *ngIf="showLoading">Loading ...</span>
+                        <span *ngIf="!showLoading">S'enregistrer</span>
+                    </button>
+                </div>
+            </form>
+                 <hr>
+                <div> <a href="#" class="text-info">Mot de passe oublié ?</a> </div>
+                <div> J'ai déjà un compte, <a routerLink ="/login" class="text-info">je me connecte.</a> </div>
+            
+            </div>
+            
+    </div>
+</div>
+            
+

@@ -1,0 +1,72 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div>
+            <h3 style="color:#B39188 ;margin-right:10%">Prix Total : ${{grandTotal}}€</h3>
+        </div>
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Numéro de Produit</th>
+                            <th>Référence</th>
+                            <th>Nom du produit</th>
+                            <th>Descriptif</th>
+                            <th>Image</th>                       
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Prix Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let item of products; let i=index;">
+                            <td>{{i+1}}</td>
+                            <td>{{item.reference}}</td>
+                            <td>{{item.designation}}</td>
+                            <td>{{item.descriptif}}</td>
+                            <td><img class="picture" style="width:62px; margin-top:5px;" src="http://localhost:8085/{{item.image}}" alt=""></td>
+                            <td>{{item.prixVente}} €</td>
+                            <td>
+                                <button (click)="incrementQuantite(quantite)" class="btn btn-sm btn-incre" style="color:#B39188 ; vertical-align: middle"> 
+                                    <i class="fas fa-plus-square"></i>
+                                </button> 
+                                {{quantite}}
+                                <button (click)="descrementQuantite(quantite)" class="btn btn-sm btn-decre" style="color:#B39188 ; vertical-align: middle"> 
+                                    <i class="fas fa-minus-square"></i>
+                                </button>
+                            </td>
+                            <td>{{quantite*item.prixVente}}€</td>
+                            <td><button (click)="removeItem(item)" class="btn btn-outline-info"><i class="fas fa-trash-alt"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptyCart()" class="btn btn-danger">Vider votre panier</button></td>
+                            <td><button routerLink="/products" class="btn btn-primary">Continuer vos achats</button></td>
+                            <td><button routerLink="/login" class="btn btn-success" (click)="saveData()">checkout</button></td>
+                            <td><strong>Grand Total : {{grandTotal}}€</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">Mon Panier</h5>
+            
+        </div>
+        
+        <div class="center">
+            <img src="http://localhost:8085/image/boiteVide2.png" alt="paquet">
+            <h4>Votre panier est vide !</h4>
+            <h4>Merci d'ajouter un article.</h4>
+            <button routerLink="/products" type="button" class="btn btn-outline-info">Acheter maintenant</button>
+            
+        </div>
+    </div>
+</ng-container>
+

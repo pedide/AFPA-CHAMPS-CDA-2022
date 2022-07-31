@@ -1,0 +1,49 @@
+<!-- HEADER -->
+<header>
+<!-- TOP HEADER -->
+    <div id="top-header">
+        <div class="container">
+            <ul class="header-links pull-left">
+                <li><a href="#"><i class="fa fa-phone"></i>+33 0102030405</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>contact@gmail.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i>1 rue des Roses 77420 Champs sur Marne</a></li>
+          
+                <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
+                <li><a href="#"><i class="fa fa-user-o"></i>Mon compte</a></li>
+                <li><a routerLink="/login" (click)="login()">Connexion</a></li>
+                <li><a (click)="logOut()">Se déconnecter</a></li>
+                
+            </ul>
+        </div>
+    </div>
+<!-- /TOP HEADER -->
+<!--MAIN HEADER -->
+    <div class="navbar shadow-sm">
+        <div class="navbar align-item-center d-flex">
+            <!-- <i style="font-size: 40px; color: #f99;" class="fas fa-shopping-cart">&nbsp;</i> -->
+            <img src="http://localhost:8085/image/toque.png" alt="Logo Toque" />
+        <strong style=" font-size: 30px; color:#fffaf0">Diablement Bon</strong>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Rechercher les produits">
+        </div>
+        <span class="fas fa-search search-icon"></span>
+
+        <!-- <form #searchForm="ngForm" class="form-inline my-2 my-lg-0 justify-content-center">
+            <input name="searchTerm" class="form-control mr-sm-2"
+                ngModel (ngModelChange)="searchProducts(searchForm.value.searchTerm)" type="search" placeholder="Rechercher les produits..">
+        </form> -->
+
+
+
+
+        </div>
+        <!-- affichage personne connecté-->
+        <h5 class="modal-title text-center"> Binevenue {{user?.firstName}}  
+            {{user?.lastName}}  </h5>
+        <!-- lien vers cart en angular -->
+        <button routerLink="cart"  class="byn btn">
+            <i style="font-size: 30px; color:#FFFAF0" class="fas fa-cart-plus"></i>
+            <div style="font-size: 11px; background-color:#FFFAF0; color:black" class="badge bg">{{totalItem}}</div>
+        </button>
+    </div>
+</header>

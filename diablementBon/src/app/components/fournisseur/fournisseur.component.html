@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light"></nav>
+        <a class="navbar-brand" href="http://localhost 8085"></a>
+        <h2>Liste des fournisseurs</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nom Fournisseur</th>
+                <th>Raison Social</th>
+                <th>Adresse</th>
+                <th>Cp</th>
+                <th>Ville</th>
+                <th>Pays</th>
+                <th>Téléphone</th>
+                <th>Fax</th>
+                <th>Email</th>
+                <th>Commande</th>
+            </tr>
+            <!-- on fait une boucle et produit est objet ds component -->
+            <tr *ngFor = "let f of fournisseur">
+                <td>{{f.idFour}}</td>
+                <td>{{f.nomFournisseur}}</td>
+                <td>{{f.raisonSocial}}</td>
+                <td>{{f.adresseFour}}</td>
+                <td>{{f.cpFour}}</td>
+                <td>{{f.villeFour}}</td>
+                <td>{{f.paysFour}}</td>
+                <td>{{f.telFour}}</td>
+                <td>{{f.faxFour}}</td>
+                <td>{{f.emailFour}}</td>
+                <td>{{f.commande}}</td>
+
+            </tr>
+        </table>
+    </div>
+    
+    </div>
+    
