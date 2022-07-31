@@ -1,0 +1,18 @@
+package com.bagboutique.rest.constant;
+
+public class SecurityConstant {
+	
+	public static final long EXPIRATION_TIME =432_000_000;//5 days expressed in milliseconds
+	public static final String TOKEN_PREFIX = "Bearer ";//no further check for verification when a token starting with Bearer
+	public static final String JWT_TOKEN_HEADER = "jwt-token";
+	public static final String TOKEN_CANNOT_BE_VERIFIED="Token cannot be verified";
+	public static final String GET_ARRAYS_LLC= "Get Arrays, XPROD";//XPROD is the name of your company
+	public static final String GET_ARRAYS_ADMINISTRATION ="User Management Portal";//
+	public static final String AUTHORITIES = "authorities";
+	public static final String FORBIDDEN_MESSAGE  = "You need to login to acces this page";
+	public static final String ACCESS_DENIED_MESSAGE = "You do not have the permission to access this page";
+	public static final String OPTIONS_HTTP_METHOD = "options";
+	//public static final String[] PUBLIC_URLS = {"/user/login","/user/register","/user/resetpassword/**","user/image/**"};
+	public static final String[] PUBLIC_URLS= {"**"} ;
+	
+}
