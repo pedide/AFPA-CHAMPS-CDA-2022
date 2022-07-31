@@ -1,0 +1,183 @@
+body{
+	font:em Helvetiva;
+	background-image: url(../background/fondEcranPoke.png)!important;
+	background-attachment:fixed;
+	font-size:medium;
+}
+
+.btn-danger{
+	width:"10px"
+}
+.nav-link{
+	color: white!important;
+
+}
+.fa, .fas, .far, .fab{
+color :  white !important;
+}
+
+.background{
+	height : 1110px !important;
+	width : 100%
+}
+
+.card-body{
+	float:left;
+	/* width : 51%; souci login*/
+	margin-bottom:10px;
+}
+.card-body2{
+	background-color:antiquewhite;
+}
+.container{
+	width : 1200px;
+	margin : 40px auto ;
+	margin-top: 50px;
+	text-align:center;
+	background-color:#ffffffc4 !important;
+}
+.card-header{
+	background-color:gold;
+}
+
+.whysign{
+	float : left;
+	/* background-color : white; */
+	width: 480px;
+	border-radius : 0 5px 5px 0;
+	padding-top : 20px;
+	padding-right : 20px;
+}
+
+.whysignLogin{
+	/* background-color : white; */
+	border-radius :5px 0 0 5px ;
+	padding : 30px 20px;
+	text-align : center;
+	}
+.whysignLogin.p{
+	color:white;
+	}
+	
+.contact{
+	list-style:none;
+	text-decoration : none;
+	display : inline-flex;
+	
+}	
+.souscontact{
+	margin-left : 10px;
+}
+[type=text],[type=email],[type=number],[type=password],select,option{
+	/* display : block;
+	margin : 0 auto;
+	width: 100%;
+	border : 0;
+	border-bottom : 1px solid rgba(0,0,0,.2);
+	height:45px;
+	line-height:45px;
+	margin-bottom:10px;
+	font-size:1em;
+	color:black; */
+	}
+	
+[type=submit]{
+	width:80%;
+	border:0;
+	background-color: #008080;
+	border-radius : 5px;
+	height:50px;
+	color:white;
+	font-size:1em;
+	font-weight:400;
+}
+[type=submit]:hover{
+	background-color: #004040;
+}
+
+[type='text']:focus{
+	outline : none;
+	border-color:black;
+}
+
+h1{
+	color:red;
+	font-weight:900;
+	font-size:2.5em;
+}
+
+p{
+	color:black;
+	font-size:1.5em;
+	margin:50px 0 50px 0;
+}
+
+span {
+  font-size: .75em;
+  background-color: white;
+  padding: 2px 5px;
+  color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  margin: 5px;
+}
+
+span:hover {
+  color: #53CACE;
+}
+
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+
+.btn-sm{
+	background-color : blue;
+	color : white;
+}
+.btn-connect  {
+	font-size:1rem;
+	background-color: #004040 !important;
+	margin-left : 10px;
+	margin-top : 0px;
+	color : white;
+	width : 150px;
+	height : auto;
+}
+.btn-connect:hover{
+	background-color : #008080 !important;
+	color : white;
+}
+.btn-sign{
+	font-size:1rem;
+	background-color: #004040;
+	margin-left : 10px;
+	color : white;
+	width : 150px;
+}
+.btn-sign:hover{
+	background-color : #008080;
+	color : white;
+}
+/* .form-control{
+	margin-bottom : 10px;
+} 
+probleme avec card*/ 
+
+.btn-send {
+	font-size: 1rem;
+	margin-left: 10px;
+	width:150px;
+	height:35px;
+	margin-top:10px;
+}
+.btn-send:hover {
+	background-color: #004040;;
+	color: white;	
+}
+p{
+font-size : 18px !important;
+margin : auto ! important;
+}
+.headBG{
+	text-align:center;
+}
