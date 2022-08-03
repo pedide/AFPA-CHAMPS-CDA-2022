@@ -1,0 +1,31 @@
+<!--HEADER-->
+<header>
+<!--TOP HEADER-->
+<div id="top-header">
+<div class="container">
+    <ul class="header-links pull-left">
+<!--<li><a href="#"><i class="fa fa-phone"></i>+ 33 1 23456789</a></li>
+        <li><a href="#"><i class="fa fa-enveloppe-o"></i>contact@philippe.com</a></li>
+        <li><a href="#"><i class="fa fa-map-marker"></i>44 rue de la paix 75001 Paris</a></li> -->
+    </ul>
+    <ul class="header-links pull-right">
+        <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
+        <li><a href="#"><i class="fa fa-user"></i>My account</a></li>
+    </ul>
+</div> 
+</div>
+<!--/TOP HEADER-->
+<!--MAIN HEADER-->
+<div class="navbar bg-black shadow-sm">
+<div class="navbar align-item-center d flex">
+<th><img style="width: 185px; height: 50px;" src="http://localhost:14010/Image/ratpNB.jpg">
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="search products">
+</div>    
+</div>
+<button routerLink="cart"class="btn btn-white">
+    <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+    <div style="font-size: 10;" class="badge bg-danger">{{totalItem}}</div>
+</button>
+</div>
+</header>

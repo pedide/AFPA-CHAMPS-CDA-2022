@@ -1,0 +1,60 @@
+<ng-container *ngIf="products.length !=0"> 
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+            <div class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>N0</th>
+                        <th>REF</th>
+                        <th>DESIGNATION</th>
+                        <th>DESCRIPTIF</th>
+                        <th>IMAGE</th>
+                        <th>PRIXVENTE</th>
+                        <th>QUANTITE</th>
+                        <th>TOTAL</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i=index">
+                        <th>{{i+1}}</th>
+                        <th>{{item.reference}}</th>
+                        <th>{{item.designation}}</th>
+                        <th style="width: 25%;">{{item.descriptif}}</th>
+                        <th><img style="width: 100px; height: 100px;" src="http://localhost:14010/{{item.image}}" alt=""></th>
+                        <th style="width: 25%;">{{item.prixVente}} €</th>
+                        <th><button><i class="fas fa-minus-square" (click)=decProduct()></i></button>
+                        {{quantite}}<button><i class="fas fa-plus-square" (click)=incProduct()></i></button>
+                        <th>{{quantite*item.prixVente}} €</th>
+                        <td>
+                            <button (click)="removeItem(item)"class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="emptycart()" class="btn btn-danger">Vider le panier</button></td>
+                        <td><button routerLink="/products" class=" btn btn-primary">Ajouter des produits</button></td>
+                        <td><button routerLink="/login" class=" btn btn-success">Checkout</button></td>
+                        <td><strong>Grand Total: ${{grandTotal}} </strong></td>
+                    </tr>
+                </tbody>
+            </div>
+            </div>
+            </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My cart</h5>
+        </div>
+        <div class="center">
+            <img src="http://localhost:14010/Image/shopping-cart-icon.jpeg" alt="">
+            <h4>Your cart is empty!</h4>
+            <h4>Add item to it now</h4>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
