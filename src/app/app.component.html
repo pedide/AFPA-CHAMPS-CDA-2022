@@ -1,0 +1,50 @@
+<ion-app>
+  <ion-split-pane contentId="main-content" when="false"> 
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-menu-button slot="start"></ion-menu-button>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-list>
+          <ion-item-divider color="success"> My account </ion-item-divider>
+          <ion-menu-toggle>
+            <ion-item button (click)="goTo('profile')">
+            <ion-icon name="person" slot="start"></ion-icon>
+            <div class="my-container-label">
+              <ion-label class="my-label-title">Profile</ion-label>
+              <ion-label color="medium">Welcome !</ion-label>
+            </div>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item button (click)="goTo('messagerie')">
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <div class="my-container-label">
+              <ion-label class="my-label-title">Messagerie</ion-label>
+              <ion-label color="medium">Consultez vos messages</ion-label>
+            </div>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item button (click)="goTo('Cart')">
+            <ion-icon name="cart" slot="start"></ion-icon>
+            <div class="my-container-label">
+              <ion-label class="my-label-title">Cart</ion-label>
+              <ion-label color="medium">Check your Cart !</ion-label>
+            </div>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

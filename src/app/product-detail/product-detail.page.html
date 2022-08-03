@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Product Detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="share()">
+        <ion-icon slot="icon-only" name="share"></ion-icon>
+      </ion-button>
+
+        <ion-button (click)="openCart()">
+          <ion-icon slot="icon-only" name="cart"></ion-icon>
+        </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+<ion-slides pager="true" [options]="slideOpt">
+  <ion-slide (click)="showImage(image, product.reference)" *ngFor="let image of product?.image">
+    <ion-img [src]="'http://localhost:14010/Image/'+image"></ion-img>
+  </ion-slide>
+</ion-slides>
+<ion-card-content>
+  <ion-card-title>
+    <ion-chip color="primary">
+      <ion-label>{{product.reference}}</ion-label>
+    </ion-chip>
+
+    <ion-chip color="primary">
+      <ion-label>{{product.designation}}</ion-label>
+    </ion-chip>
+<div class="my-container-label">
+  <div class="span-container">
+    <span class="price">{{product.prixVente | currency }}</span>
+    <span *ngIf="product?.averageStar >=1"> 
+     <ion-icon class="iconStar" name="star"></ion-icon> 
+    </span>
+    <span *ngIf="product?.averageStar >=2"> 
+      <ion-icon class="iconStar" name="star"></ion-icon> 
+     </span>
+     <span *ngIf="product?.averageStar >=3"> 
+      <ion-icon class="iconStar" name="star"></ion-icon> 
+     </span>
+     <span *ngIf="product?.averageStar >=4"> 
+      <ion-icon class="iconStar" name="star"></ion-icon> 
+     </span>
+     <span *ngIf="product?.averageStar >=5"> 
+      <ion-icon class="iconStar" name="star"></ion-icon> 
+     </span>
+  </div>
+</div>
+  </ion-card-title>
+  <h3 class="title"> Leave a comment </h3>
+  <div class="rating-container">
+    <rating 
+    [(ngModel)]="rate" 
+    readonly="false"
+    size="default"
+    (ngModelChange)="onModelChange($event)">
+    </rating>
+    <ion-button (click)="leaveNote()" size="small">Note</ion-button>
+  </div>
+</ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+ <ion-toolbar>
+  <ion-button (click)="addToCart(article)" class="btn-cart"
+  shape="round" size="large" expand="full">Add Cart</ion-button>
+ </ion-toolbar>
+</ion-footer>

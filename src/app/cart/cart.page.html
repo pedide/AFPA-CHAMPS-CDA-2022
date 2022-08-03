@@ -1,0 +1,74 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="white"></ion-menu-button> 
+    <ion-title>Cart page</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-list>
+  <ion-item *ngFor="let products of products; let i=index">
+    <ion-label>{{products.reference}}</ion-label>
+    <ion-label>{{products.description}}</ion-label>
+    <ion-label>{{products.prixVente}} €</ion-label>
+  </ion-item>
+</ion-list>
+</ion-row>
+</ion-content> -->
+
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>MY CART</ion-title>
+<ion-buttons slot="start">
+  <ion-buttons class="backbtn" routerLink="/home" routerDirection="back">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-buttons>
+</ion-buttons>
+
+<ion-buttons slot="end">
+  <ion-button class="notification">
+    <ion-icon name="notifications-outline"></ion-icon>
+  </ion-button>
+</ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content fullscreen="true">
+<h1 class="title">Cart</h1>
+
+<div class="cart-items">
+  <ion-card mode="ios">
+    <ion-card-content>
+      <div class="item-img">
+        <img src=" http://localhost:14010/Image/billet_idf.jpeg">
+      </div>
+
+      <div class="item-info">
+        <!-- <ion-item *ngFor="let products of products; let i=index"> -->
+        <p>ticket</p>
+        <p>ticket + dans paris</p>
+        <p>1,90 €</p>
+        <p></p>
+        <!-- </ion-item> -->
+
+
+        <div class="qty-selector">
+          <ion-button fill="clear">-</ion-button>
+          <ion-label>1</ion-label>
+          <ion-button fill="clear">+</ion-button>
+
+
+
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+ <ion-toolbar color= "translucent">
+  <ion-button expand="block" color="success" class="main-button">Continuer</ion-button>
+ </ion-toolbar>
+</ion-footer>

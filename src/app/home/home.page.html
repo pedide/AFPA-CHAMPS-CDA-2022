@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-menu-button slot="start" color="white"></ion-menu-button> 
+    <ion-title>RATP Products</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+  <ion-card class="card" style="width: 40%" *ngFor="let products of productsList">
+    <ion-img src="http://localhost:14010/{{products.image}}"></ion-img>
+    <ion-card-header>
+     <ion-card-subtitle>{{products.prixVente}} € </ion-card-subtitle>
+     <ion-card-title>{{products.reference}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" color="primary" (click)="addToCart(products.id)">add to cart</ion-button>
+      <ion-button routerLink="/show-detail" 
+      expand="block" color="danger"
+      (click)="showDetails(products.id)">Show details</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-row>
+
+
+</ion-content>
+<ion-button routerLink="/cart"expand="block" color="success">Aller au panier</ion-button>
